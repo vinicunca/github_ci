@@ -21,7 +21,7 @@ jobs:
       - name: Setup
         run: npm i -g pnpm
 
-      - run: npx conventional-github-releaser -p angular
+      - run: pnpm dlx conventional-github-releaser -p angular
         continue-on-error: true
         env:
           CONVENTIONAL_GITHUB_RELEASER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
